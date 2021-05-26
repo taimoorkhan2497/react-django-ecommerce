@@ -1,3 +1,9 @@
  a {
    text-decoration: none !important;
 }
+
+.nav-text-center{
+  margin: auto;
+  padding-left: 5rem;
+  color:#00b5ad
+}

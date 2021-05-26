@@ -43,7 +43,7 @@ else{
     <Grid.Column style={{ maxWidth: 450 }}>
     {error && errors.map(err =>(<Message negative>{err}</Message>) )}
       <Header as='h2' color='teal' textAlign='center'>
-        <Image src={logo} /> Sign up to your account
+       Sign up to your account
       </Header>
 
       <Form size='large' onSubmit= {handleSubmit} >

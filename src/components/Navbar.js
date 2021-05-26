@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { connect } from "react-redux";
 import {logout} from '../store/actions/auth';
 import {fetchCart} from '../store/actions/cart';
+import {  Header } from 'semantic-ui-react';
 
 function Navbar(props) {
     const {authenticated, logout, fetchCart, cart} = props;
@@ -14,7 +15,7 @@ function Navbar(props) {
 
     return (
      
-        <Menu>
+        <Menu className="m-0">
         <Container>
             <Link to="/">
             <Menu.Item header name='home'/>
@@ -23,6 +24,8 @@ function Navbar(props) {
             <Link to="/products">
             <Menu.Item header name='Products'/>
             </Link>
+            <h4 className="nav-text-center ml-2">welcome to shopping world!</h4>
+          
 
         { authenticated ?(
             <React.Fragment>
@@ -60,13 +63,14 @@ function Navbar(props) {
             </Dropdown.Menu>
             </Dropdown>
         
-            <Menu.Item header onClick={logout} name="Logout" style={{cursor : 'pointer'}} position="right" />
+            <Menu.Item header onClick={logout} name="Logout"  style={{cursor : 'pointer'}} position="right" />
 
             </Menu.Menu>
         </React.Fragment>
 
         ) : (
-            <Menu.Menu position="right">
+            
+            <Menu.Menu style={{margin:"0px!important"}} position="right">
                 <Link to="/login">
                   <Menu.Item header>Login</Menu.Item>
                 </Link>
@@ -74,6 +78,7 @@ function Navbar(props) {
                   <Menu.Item header>Signup</Menu.Item>
                 </Link>
               </Menu.Menu>
+            
         )}
         </Container>
       </Menu>
