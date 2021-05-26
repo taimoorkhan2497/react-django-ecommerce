@@ -9,6 +9,13 @@ import { combineReducers, compose, createStore, applyMiddleware } from 'redux';
 import authReducer from './store/reducers/authReducer';
 import cartReducer from './store/reducers/cartReducer';
 import {Provider} from 'react-redux';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+
+
+// styles
+import "bootstrap/scss/bootstrap.scss";
+import "./assets/scss/paper-kit.scss?v=1.3.0";
+import "./assets/demo/demo.css?v=1.3.0";
 
 
 const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
